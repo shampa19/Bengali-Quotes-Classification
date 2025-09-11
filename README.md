@@ -78,4 +78,4 @@ Bangla_Quotes_Classification_With_BiLSTM.ipynb → Bidirectional LSTM
 
 Install dependencies with:
 
-pip install -r requirements.txt
+pip install -r requirements.txt export it in a github read me file and generate it
