@@ -1,81 +1,78 @@
-Bangla Quotes Classification – Comparative Analysis
 
-This project focuses on text classification of Bangla quotes into multiple categories using both classical machine learning algorithms and deep learning models. The goal is to evaluate how traditional approaches compare with advanced neural architectures for multiclass text classification in the Bangla language.
+# Bangla Quotes Classification – Comparative Analysis
 
-📌 Overview
+This project focuses on classifying Bangla quotes into multiple categories using both classical machine learning algorithms and deep learning models. The goal is to compare the performance of traditional approaches (like Multinomial Naive Bayes and Logistic Regression) with advanced neural architectures (like LSTM and Bi-LSTM) for multiclass text classification in the Bangla language.
 
-Dataset: Bangla Quotes Dataset (preprocessed and cleaned for classification tasks).
+## Overview
 
-Algorithms Used:
+- **Dataset**: Bangla Quotes Dataset (preprocessed and cleaned for classification tasks).
+- **Algorithms Used**:
+  - **Multinomial Naive Bayes (MNB)**
+  - **Logistic Regression (LR)**
+  - **Long Short-Term Memory (LSTM)**
+  - **Bidirectional LSTM (Bi-LSTM)**
 
-Multinomial Naive Bayes (MNB)
+### Objective
+The main objective is to compare the accuracy and performance metrics across these algorithms to determine the best-suited model for Bangla text classification.
 
-Logistic Regression (LR)
+---
 
-Long Short-Term Memory (LSTM)
+## Methodology
 
-Bidirectional LSTM (Bi-LSTM)
+### Preprocessing
+- Tokenization and stopword removal for Bangla text.
+- Text-to-sequence conversion with padding for deep learning models.
 
-Objective: Compare accuracy and performance metrics across algorithms to determine the best-suited model for Bangla text classification.
+### Models Implemented
+- **MNB & LR**: Trained on TF-IDF features.
+- **LSTM & Bi-LSTM**: Trained on word embeddings with sequence input.
 
-⚙️ Methodology
+### Evaluation Metrics
+- **Precision**
+- **Recall**
+- **F1-Score**
+- **Accuracy**
 
-Preprocessing
+---
 
-Tokenization and stopword removal for Bangla text.
+## Results
 
-Text-to-sequence conversion with padding for deep learning models.
+### Table II: Accuracy table for multiclass classification
 
-Models Implemented
+| Algorithm                             | Precision | Recall | F1-Score | Accuracy  |
+|---------------------------------------|-----------|--------|----------|-----------|
+| Multinomial Naive Bayes (MNB)         | 0.5860    | 0.6264 | 0.5900   | 62.65%    |
+| Logistic Regression (LR)              | 0.6317    | 0.6706 | 0.6358   | 67.06%    |
+| Long Short-Term Memory (LSTM)         | 0.9212    | 0.9283 | 0.9212   | 92.84%    |
+| Bidirectional LSTM (Bi-LSTM)          | 0.9493    | 0.9462 | 0.9434   | 94.63%    |
 
-MNB & LR: Trained on TF-IDF features.
+### Observations:
+- Traditional ML algorithms (MNB, LR) perform moderately.
+- Deep learning models (LSTM, Bi-LSTM) show significant improvement, with **Bi-LSTM** outperforming all in every metric.
 
-LSTM & Bi-LSTM: Trained on word embeddings with sequence input.
+---
 
-Evaluation Metrics
+## Conclusion
 
-Precision
+- **Bi-LSTM** is the most effective approach for Bangla Quotes classification, achieving 94.63% accuracy.
+- This highlights the advantage of deep contextual representation for Bangla text.
 
-Recall
+Future work can focus on exploring transformer-based models (e.g., BERT, mBERT, BanglaBERT) for further improvements.
 
-F1-Score
+---
 
-Accuracy
+## Files in Repository
 
-📊 Results
+- **Bangla_Quotes_Classification_With_Logistic_Regression_&_Multinomial_Naive_Bayes.ipynb** → Classical ML models.
+- **Bangla_Quotes_Classification_With_LSTM.ipynb** → Deep learning LSTM.
+- **Bangla_Quotes_Classification_With_BiLSTM.ipynb** → Bidirectional LSTM.
 
-Table II: Accuracy table for multiclass classification
+---
 
-Algorithm	Precision	Recall	F1-Score	Accuracy
-Multinomial Naive Bayes (MNB)	0.5860	0.6264	0.5900	62.65%
-Logistic Regression (LR)	0.6317	0.6706	0.6358	67.06%
-Long Short-Term Memory (LSTM)	0.9212	0.9283	0.9212	92.84%
-Bidirectional LSTM (Bi-LSTM)	0.9493	0.9462	0.9434	94.63%
+## Requirements
 
-📌 Observation:
+To install the necessary dependencies, run:
 
-Traditional ML algorithms (MNB, LR) perform moderately.
-
-Deep learning models (LSTM, Bi-LSTM) show significant improvement, with Bi-LSTM outperforming all in every metric.
-
-🚀 Conclusion
-
-Bi-LSTM is the most effective approach for Bangla Quotes classification, achieving 94.63% accuracy.
-
-This highlights the advantage of deep contextual representation for Bangla text.
-
-Future work can focus on transformer-based models (e.g., BERT, mBERT, BanglaBERT) for further improvements.
-
-📂 Files in Repository
-
-Bangla_Quotes_Classification_With_Logistic_Regression_&_Multinomial_Naive_Bayes.ipynb → Classical ML models
-
-Bangla_Quotes_Classification_With_LSTM.ipynb → Deep learning LSTM
-
-Bangla_Quotes_Classification_With_BiLSTM.ipynb → Bidirectional LSTM
-
-🔧 Requirements
-
-Install dependencies with:
-
-pip install -r requirements.txt 
+```bash
+pip install -r requirements.txt
+```
